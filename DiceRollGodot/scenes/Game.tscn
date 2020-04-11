@@ -6,18 +6,20 @@
 [node name="Game" type="Node"]
 script = ExtResource( 2 )
 
-[node name="Dice" parent="." instance=ExtResource( 1 )]
-position = Vector2( 519.668, 317.247 )
-
-[node name="UI" type="Node2D" parent="."]
-
-[node name="Button" type="Button" parent="UI"]
-margin_left = 34.6688
-margin_top = 31.6541
-margin_right = 70.6688
-margin_bottom = 51.6541
-text = "Roll"
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Button" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dice" parent="." instance=ExtResource( 1 )]
+position = Vector2( 980.207, 527.426 )
 [connection signal="pressed" from="UI/Button" to="." method="_on_Button_pressed"]
